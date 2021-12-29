@@ -31,13 +31,13 @@ services:
       - TEMP_EXPIRATION=7
       - DELETED_PROJECT_EXPIRATION=7
       - CLOSED_ACCOUNT_EXPIRATION=1
-      - DEFAULT_STORAGE_SIZE=104857600 # 100 MB
+      - DEFAULT_STORAGE_SIZE=85899345920 # 80 GB
       - DB_USER=postgres
       - DB_PASSWORD=postgres
       - DB_HOST=172.17.0.1
       - DB_PORT=5433
       - DB_APPLICATION_NAME=mergin
-      - MAIL_SUPPRESS_SEND=1  # set to 0 in production
+      - MAIL_SUPPRESS_SEND=0  # set to 0 in production
       - MAIL_SERVER=fixme
       - MAIL_DEFAULT_SENDER=fixme
       - MAIL_USERNAME=fixme
