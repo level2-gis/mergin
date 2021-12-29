@@ -32,6 +32,7 @@ services:
       - DELETED_PROJECT_EXPIRATION=7
       - CLOSED_ACCOUNT_EXPIRATION=1
       - DEFAULT_STORAGE_SIZE=85899345920 # 80 GB
+      - DB_DATABASE=mergin
       - DB_USER=postgres
       - DB_PASSWORD=postgres
       - DB_HOST=172.17.0.1
