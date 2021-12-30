@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  #removing db from docker container, use host postgres instance, prepare db user before
+  #removing db from docker container, use host postgres instance, prepare db and user before
   #db:
   #  image: postgres:10
   #  container_name: mergin-db
