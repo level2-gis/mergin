@@ -1,15 +1,16 @@
 version: "3.7"
 
 services:
-  db:
-    image: postgres:10
-    container_name: mergin-db
-    ports:
-      - 5433:5432
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=mergin
+  #removing db from docker container, use host postgres instance, prepare db user before
+  #db:
+  #  image: postgres:10
+  #  container_name: mergin-db
+  #  ports:
+  #    - 5433:5432
+  #  environment:
+  #    - POSTGRES_USER=postgres
+  #    - POSTGRES_PASSWORD=postgres
+  #    - POSTGRES_DB=mergin
 
   server:
     image: lutraconsulting/mergin
@@ -34,10 +35,10 @@ services:
       - CLOSED_ACCOUNT_EXPIRATION=1
       - DEFAULT_STORAGE_SIZE=85899345920 # 80 GB
       - DB_DATABASE=mergin
-      - DB_USER=postgres
-      - DB_PASSWORD=postgres
-      - DB_HOST=172.17.0.1
-      - DB_PORT=5433
+      - DB_USER=mergin
+      - DB_PASSWORD=password
+      - DB_HOST=192.168.0.1
+      - DB_PORT=5432
       - DB_APPLICATION_NAME=mergin
       - MAIL_SUPPRESS_SEND=0  # set to 0 in production
       - MAIL_SERVER=fixme
@@ -51,10 +52,10 @@ services:
       - CELERY_RESULT_BACKEND=redis://172.17.0.1:6379/0
     ports:
       - 5000:5000
-    depends_on:
-      - db
-    links:
-      - db
+    #depends_on:
+    #  - db
+    #links:
+    #  - db
   redis:
     image: redis
     container_name: mergin-redis
