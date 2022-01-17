@@ -24,7 +24,7 @@ services:
       - SECURITY_PASSWORD_SALT=fixme
       - LOCAL_PROJECTS=/data
       - MAINTENANCE_FILE=/data/MAINTENANCE
-      - USER_SELF_REGISTRATION=0
+      - USER_SELF_REGISTRATION=1
       - USE_X_ACCEL=0
       - GEODIFF_LOGGER_LEVEL=2
       - TEMP_DIR=/data/tmp
