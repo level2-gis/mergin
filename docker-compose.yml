@@ -42,8 +42,10 @@ services:
       - DB_APPLICATION_NAME=mergin
       - MAIL_SUPPRESS_SEND=0  # set to 0 in production
       - MAIL_SERVER=fixme
+      - MAIL_PORT=fixme
       - MAIL_DEFAULT_SENDER=fixme
       - MAIL_USERNAME=fixme
+      - MAIL_PASSWORD=fixme
       - MERGIN_BASE_URL=your-server-url # for email templates
       - MERGIN_LOGO_URL=""
       - CONTACT_EMAIL=fixme
