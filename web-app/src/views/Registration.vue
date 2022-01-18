@@ -17,7 +17,7 @@
     <v-container class="py-1">
       <v-card>
         <v-responsive class="mt-2">
-          <img src="../assets/logo_color.svg" @click="$router.push('/login')">
+          <img src="../assets/logo_color.png" @click="$router.push('/login')">
         </v-responsive>
         <v-card-title class="primary--text font-weight-bold pb-0 ml-3">
           <h3> Create your account</h3>
