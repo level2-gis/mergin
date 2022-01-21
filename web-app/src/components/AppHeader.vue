@@ -7,7 +7,7 @@
       <router-link
         class="logo"
         :to="{name: 'about'}">
-        <img src="@/assets/logo.png">
+        <img src="@/assets/logo.svg">
         <div class="banner" v-if="app.in_beta">BETA</div>
       </router-link>
 

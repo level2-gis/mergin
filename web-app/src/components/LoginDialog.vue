@@ -17,7 +17,7 @@
     <v-container class="py-1">
       <v-card>
         <v-responsive class="mt-2">
-          <img src="../assets/logo_color.png" @click="home">
+          <img src="../assets/logo_color.svg" @click="home">
         </v-responsive>
         <v-card-text>
           <p
