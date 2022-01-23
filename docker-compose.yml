@@ -13,7 +13,7 @@ services:
   #    - POSTGRES_DB=mergin
 
   server:
-    image: lutraconsulting/mergin
+    image: uprel/mergin
     container_name: mergin-server
     volumes:
       - ./projects:/data  # map data dir to host
