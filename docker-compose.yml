@@ -36,13 +36,15 @@ services:
       - DEFAULT_STORAGE_SIZE=85899345920 # 80 GB
       - DB_DATABASE=mergin
       - DB_USER=mergin
-      - DB_PASSWORD=password
-      - DB_HOST=192.168.0.1
+      - DB_PASSWORD=fixme
+      - DB_HOST=fixme
       - DB_PORT=5432
       - DB_APPLICATION_NAME=mergin
       - MAIL_SUPPRESS_SEND=0  # set to 0 in production
       - MAIL_SERVER=fixme
       - MAIL_PORT=fixme
+      - MAIL_USE_TLS=0
+      - MAIL_USE_SSL=1
       - MAIL_DEFAULT_SENDER=fixme
       - MAIL_USERNAME=fixme
       - MAIL_PASSWORD=fixme
