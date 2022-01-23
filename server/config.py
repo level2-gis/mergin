@@ -34,7 +34,7 @@ keepalive = 30
 
 accesslog = '-'
 
-errorlog = '-'
+errorlog = '/var/log/gunicorn_error.log'
 
 access_log_format = '[ACCESS] %({x-forwarded-for}i)s %(m)s %(U)s %(q)s %(H)s %(s)s %(B)s %(f)s "%(a)s" %(D)s %(p)s'
 
