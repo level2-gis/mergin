@@ -1,11 +1,11 @@
 {% extends "email/components/content.html" %}
 {% block html %}
-  <p>Dear {{ user.username }},</p> <br>
-  <p>Your access privileges to Mergin project <b><a href="{{ link }}"> {{ project.namespace }}/{{ project.name }}</a></b> have been modified.</p>
-  <p>You can now
+  <p>Pozdravljen/-a {{ user.username }},</p> <br>
+  <p>Vaš dostop do projekta na Merginu <b><a href="{{ link }}"> {{ project.namespace }}/{{ project.name }}</a></b> je bil spremenjen.</p>
+  <p>Sedaj lahko
     {% for item in privileges %}
     <b>{{ item }}</b>{% if not loop.last %}, {% endif %}
     {% endfor %}
-    the project.
+    projekt.
   </p>
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends "email/components/content.html" %}
 {% block html %}
-  <p>Dear {{ user.username }}, </p> <br>
-  <p>Thank you! You have successfully registered with Mergin. To verify your email address please follow this link:</p>
+  <p>Pozdravljen/-a {{ user.username }}, </p> <br>
+  <p>Hvala! Uspešno si se registriral/-a pri GEO-PORTAL Mergin. Za potrditev tvojega e-poštnega naslova prosimo odpri to povezavo:</p>
   <p><a href="{{ confirm_url }}">{{ confirm_url }}</a></p>
 {% endblock %}

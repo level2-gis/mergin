@@ -20,14 +20,14 @@
           <img src="../assets/logo_color.svg" @click="$router.push('/login')">
         </v-responsive>
         <v-card-title class="primary--text font-weight-bold pb-0 ml-3">
-          <h3> Create your account</h3>
+          <h3> Ustvari račun</h3>
           <v-spacer/>
             <v-btn
             text
             color="primary"
             class="reset"
             :to="{name: 'login'}"
-            >Sign in
+            >prijava
           </v-btn>
         </v-card-title>
         <v-card-text>

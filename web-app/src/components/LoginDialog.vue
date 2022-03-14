@@ -28,7 +28,7 @@
           <v-form class="login-form">
             <template v-if="forgotPassword">
               <v-text-field
-                placeholder="Email"
+                placeholder="e-pošta"
                 name="email"
                 color="orange"
                 v-model="email"
@@ -41,12 +41,12 @@
                 :disabled="!email"
                 @click="reset"
               >
-                Reset Password
+                Ponastavi geslo
               </v-btn>
             </template>
             <template v-else>
               <v-text-field
-                placeholder="Username or email"
+                placeholder="up. ime ali e-pošta"
                 name="login"
                 color="orange"
                 v-model="login"
@@ -54,7 +54,7 @@
                 @keyup.enter="loginUser"
               />
               <v-text-field
-                placeholder="Password"
+                placeholder="geslo"
                 name="password"
                 color="orange"
                 v-model="password"
@@ -72,7 +72,7 @@
                 id="login-btn"
                 @click="loginUser"
               >
-                Sign In
+                Prijava
               </v-btn>
             </template>
           </v-form>
@@ -83,7 +83,7 @@
             color="primary"
             class="reset"
             :to="{name: 'login', params:{reset: 'reset'}}"
-            >Forgot password?
+            >pozabljeno geslo?
           </v-btn>
             <v-btn
             v-if="!forgotPassword && app.registration"
@@ -91,11 +91,11 @@
             color="primary"
             class="reset"
             @click="toRegister"
-            >Register
+            >registracija
           </v-btn>
           </div>
         </v-card-text>
-        <p class="cookies">This website uses cookies. By continuing to use this website you consent to their use.</p>
+        <p class="cookies">To spletno mesto uporablja piškotke. Z nadaljnjo uporabo te spletne strani se strinjate z njihovo uporabo.</p>
       </v-card>
     </v-container>
     <v-spacer/>

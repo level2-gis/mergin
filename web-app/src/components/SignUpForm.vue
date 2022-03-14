@@ -10,14 +10,14 @@
     />
     <v-form class="layout column sign-up-form">
       <v-text-field
-        placeholder="Username"
+        placeholder="uporabniško ime"
         name="username"
         color="orange"
         v-model="username"
         :error-messages="errors.username"
       />
      <v-text-field
-        placeholder="Email"
+        placeholder="e-pošta"
         name="email"
         color="orange"
         v-model="email"
@@ -25,7 +25,7 @@
       />
         <v-layout align-center>
           <v-text-field
-              placeholder="Password"
+              placeholder="geslo"
               name="password"
               color="orange"
               v-model="password"
@@ -57,7 +57,7 @@
           </v-tooltip>
         </v-layout>
       <v-text-field
-        placeholder="Confirm password"
+        placeholder="ponovi geslo"
         name="confirm"
         color="orange"
         v-model="confirm"
@@ -72,10 +72,10 @@
         id="sign-up-btn"
         @click="signUp"
       >
-        Sign Up
+        Vpis
       </v-btn>
       <p class="cookies">
-        This website uses cookies. By continuing to use this website you consent to their use.
+        To spletno mesto uporablja piškotke. Z nadaljnjo uporabo te spletne strani se strinjate z njihovo uporabo.
       </p>
     </v-form>
   </v-card-text>
@@ -126,14 +126,14 @@ export default {
       }
       this.$http.post('/auth/signup', data, { 'axios-retry': { retries: 5, retryCondition: error => postRetryCond(error) } })
         .then((resp) => {
-          this.$notification.show('Confirmation email was sent to your email address')
+          this.$notification.show('Potrditvena e-pošta je bila poslana na vaš e-poštni naslov')
           this.$store.dispatch('clearUserData')
           this.$store.commit('user', resp.data)
           this.$emit('success')
           waitCursor(false)
         })
         .catch(err => {
-          this.handleError(err, 'Failed to send confirmation email')
+          this.handleError(err, 'Potrditvene e-pošte ni bilo mogoče poslati')
           waitCursor(false)
         })
     }
