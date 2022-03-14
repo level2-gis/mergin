@@ -34,8 +34,8 @@ services:
       - DELETED_PROJECT_EXPIRATION=7
       - CLOSED_ACCOUNT_EXPIRATION=1
       - DEFAULT_STORAGE_SIZE=85899345920 # 80 GB
-      - DB_DATABASE=mergin
-      - DB_USER=mergin
+      - DB_DATABASE=fixme
+      - DB_USER=fixme
       - DB_PASSWORD=fixme
       - DB_HOST=fixme
       - DB_PORT=5432
