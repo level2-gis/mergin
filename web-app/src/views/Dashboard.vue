@@ -10,11 +10,11 @@
                     outlined
                     class="bubble mt-3"
                     style="background-color: orange; color: rgba(0,0,0,.87);">
-              Your email hasn't been confirmed yet
+              Tvoja e-pošta še ni potrjena
               <v-btn color="#ecf3ff"
                      @click="sendConfirmationEmail(app.user.email)"
                      style="float:right;"
-              >Send confirmation email
+              >Pošlji potrditveno sporočilo
               </v-btn>
             </v-card>
           </v-row>
@@ -28,27 +28,13 @@
               <span> Your storage is almost full ({{usage}}%). Soon you will not able to sync your projects.</span>
             </v-card>
           </v-row>
-          <v-row v-if="!app.user.profile.has_project"
-          >
-            <v-card
-                outlined
-                class="bubble mt-3"              >
-              <h3>Welcome {{app.user.username}}, are you ready to start?</h3>
-              <p>First create new project, add people to your organisation or explore public project for more
-                inspiration</p>
-              <v-btn color="#ff9800"
-                     @click="newProjectDialog(app.user.email)"
-              ><span style="color: white;">New project</span>
-              </v-btn>
-            </v-card>
-          </v-row>
           <v-row >
             <v-card
                 class="bubble mt-3"
                 outlined>
-              <h3>Download Input app</h3>
-              <p>Capture geo-info easily through your mobile/tablet with the Input app.
-                Designed to be compatible with all mobile devices - even those with small screens.</p>
+              <h3>Namesti si aplikacijo</h3>
+              <p>Z aplikacijo Input enostavno zajemite prostorske podatke prek mobilnega telefona/tablice.
+                Združljiva z vsemi mobilnimi napravami.</p>
               <v-row>
                 <v-col cols="6"
                        md="3"
@@ -86,7 +72,7 @@
           </v-row>
           <v-row v-if="accessRequests && accessRequests.length > 0">
             <v-card class="bubble mt-3">
-              <h3>Project access requests</h3>
+              <h3>Zahteve za prenos projektov</h3>
               <v-card-text>
                 <project-access-request-table/>
               </v-card-text>
@@ -96,7 +82,7 @@
             <v-card class="bubble mt-3"
             :outlined="true"
             color="white">
-              <h3>Recent active projects</h3>
+              <h3>Nedavni aktivni projekti</h3>
               <v-card-text style="padding-left: 0px">
                 <projects-table
                     :show-namespace="true"
