@@ -504,7 +504,7 @@ def update_project(namespace, project_name, data):  # noqa: E501  # pylint: disa
             privileges.append('upload')
         if user_profile.user.id in project.access.readers:
             privileges.append('download')
-        subject = "Project access modified"
+        subject = "Sprememba dostopa do projekta"
         if len(privileges):
             html = render_template('email/modified_project_access.html', subject=subject, project=project, user=user_profile.user,
                                    privileges=privileges, link=web_link)
@@ -514,7 +514,7 @@ def update_project(namespace, project_name, data):  # noqa: E501  # pylint: disa
         if not (user_profile.receive_notifications and user_profile.user.verified_email):
             continue
         email_data = {
-            'subject': f'Access to mergin project {project_path} has been modified',
+            'subject': f'Dostop do mergin projekta {project_path} je bil spremenjen',
             'html': html,
             'recipients': [user_profile.user.email],
             'sender': current_app.config['MAIL_DEFAULT_SENDER']

@@ -191,7 +191,7 @@ def init_app(app):
             current_user,
             'auth.confirm_email',
             'email/email_confirmation.html',
-            'Email confirmation'
+            'Potrditev e-pošte'
         )
         return jsonify({"success": True})
 
@@ -234,9 +234,9 @@ def init_app(app):
             db.session.commit()
             # send welcome email if user is freshly registered
             if user.profile.registration_date and user.profile.registration_date > datetime.utcnow() - timedelta(hours=1):
-                html = render_template('email/welcome_email.html', subject="Welcome to Mergin!")
+                html = render_template('email/welcome_email.html', subject="Dobrodošli v Mergin | GEO-PORTAL")
                 email_data = {
-                    'subject': "Welcome to Mergin",
+                    'subject': "Dobrodošli v Mergin | GEO-PORTAL",
                     'html': html,
                     'recipients': [user.email],
                     'sender': app.config['MAIL_DEFAULT_SENDER']
@@ -305,7 +305,7 @@ def init_app(app):
                     user,
                     'auth.confirm_email',
                     'email/user_registration.html',
-                    'Email confirmation'
+                    'Potrditev e-pošte'
                 )
                 login_user(user)
                 LoginHistory.add_record(user.username, request)

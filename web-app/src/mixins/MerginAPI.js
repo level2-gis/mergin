@@ -80,9 +80,9 @@ export default {
       // todo logic
       this.$http.get('/auth/resend_confirm_email')
         .then(() => {
-          this.$notification.show(`Email was sent to address: ${email}`)
+          this.$notification.show(`E-pošta je bila poslanan na naslov: ${email}`)
         })
-        .catch(err => this.handleError(err, 'Failed to send confirmation email, please check your address in user profile settings'))
+        .catch(err => this.handleError(err, 'Pošiljanje ni uspelo, preveri podatke v svojem profilu!'))
     },
     /**
      * fetch logged user profile

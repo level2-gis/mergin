@@ -33,8 +33,7 @@
                 class="bubble mt-3"
                 outlined>
               <h3>Namesti si aplikacijo</h3>
-              <p>Z aplikacijo Input enostavno zajemite prostorske podatke prek mobilnega telefona/tablice.
-                Združljiva z vsemi mobilnimi napravami.</p>
+              <p>Z aplikacijo Input enostavno zajameš prostorske podatke prek mobilnega telefona/tablice.</p>
               <v-row>
                 <v-col cols="6"
                        md="3"
