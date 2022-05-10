@@ -166,7 +166,7 @@ export default {
       this.$http.post('/auth/password_reset', { email: this.email })
         .then(() => {
           this.forgotPassword = false
-          this.$notification.show('Email with password reset link was sent to your email address', { timeout: 3000 })
+          this.$notification.show('E-pošta z navodilom za ponastavitev gesla je bila poslana na vaš naslov.', { timeout: 3000 })
         })
         .catch(err => this.handleError(err, 'Failed to send confirmation email'))
     },

@@ -289,7 +289,7 @@ def init_app(app):
             user,
             '.confirm_new_password',
             'email/password_reset.html',
-            'Password reset'
+            'Ponastavitev gesla'
         )
         return jsonify({"success": True})
 
