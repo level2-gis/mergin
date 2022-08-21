@@ -48,7 +48,7 @@ class Configuration(object):
     MAIL_DEFAULT_SENDER = config('MAIL_DEFAULT_SENDER')
     MAIL_USERNAME = config('MAIL_USERNAME')
     MAIL_PASSWORD = config('MAIL_PASSWORD')
-    MAIL_DEBUG = config('MAIL_SUPPRESS_SEND', default=False, cast=bool)
+    MAIL_DEBUG = config('MAIL_DEBUG', default=False, cast=bool)
     MAIL_SUPPRESS_SEND = config('MAIL_SUPPRESS_SEND', default=True, cast=bool)
 
     USER_SELF_REGISTRATION = config('USER_SELF_REGISTRATION', default=True, cast=bool)
