@@ -279,10 +279,10 @@ def init_app(app):
 
         user = User.query.filter(func.lower(User.email) == func.lower(form.email.data.strip())).one_or_none()
         if not user:
-            return jsonify({"email": ["Account with given email does not exists"]}), 404
+            return jsonify({"email": ["Uporabniški račun s to e-pošto ne obstaja"]}), 404
         if not user.active:
             # user should confirm email first
-            return jsonify({"email": ["Account is not active"]}), 400
+            return jsonify({"email": ["Uporabniški račun ni aktiven"]}), 400
 
         send_confirmation_email(
             app,
@@ -336,7 +336,7 @@ def init_app(app):
         if email_changed:
             user = User.query.filter(func.lower(User.email) == func.lower(form.email.data.strip())).first()
             if user:
-                form.email.errors.append("Email already exists")
+                form.email.errors.append("E-pošta že obstaja")
                 return jsonify(form.errors), 400
             current_user.verified_email = False
 
@@ -356,7 +356,7 @@ def init_app(app):
         if not form.validate_on_submit():
             return jsonify(form.errors), 400
 
-        user = User.query.filter_by(username=username).first_or_404("User not found")
+        user = User.query.filter_by(username=username).first_or_404("Uporabnik ne obstaja")
         form.update_obj(user)
         db.session.add(user)
         db.session.commit()
