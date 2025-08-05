@@ -8,7 +8,7 @@
       ]"
     >
       <slot name="logo">
-        <img src="@/assets/mm-gp-logo.svg" />
+        <img src="@/assets/mm-logo.svg" />
       </slot>
     </aside>
 
