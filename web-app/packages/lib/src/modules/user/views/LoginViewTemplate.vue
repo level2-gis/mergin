@@ -8,8 +8,8 @@ SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-MerginMaps-Commercial
   <app-onboarding-page>
     <template #header>
       <h1 class="headline-h1">
-        <template v-if="forgotPassword">Reset password</template
-        ><template v-else>MerginMaps GEO-PORTAL</template>
+        <template v-if="forgotPassword">Nastavi geslo</template
+        ><template v-else>Prijava</template>
       </h1>
     </template>
 
@@ -48,7 +48,7 @@ SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-MerginMaps-Commercial
         data-cy="reset-form-btn"
         :disabled="!email"
         @click="reset"
-        label="Reset password"
+        label="Novo geslo"
       />
     </form>
     <form v-else @submit.prevent="loginUser" class="flex flex-column">
