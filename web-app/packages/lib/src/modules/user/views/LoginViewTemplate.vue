@@ -111,7 +111,7 @@ SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-MerginMaps-Commercial
         size="large"
         label="Prijava"
       />
-
+        <br>
         <a target="_blank" href="https://level2.si/contact/?podrocje=merginmaps" class="text-color-forest title-t3 align-self-center">Želite dostop za vašo organizacijo?</a
       >
     </form>
