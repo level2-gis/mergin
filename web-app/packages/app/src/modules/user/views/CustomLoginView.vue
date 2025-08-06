@@ -2,9 +2,12 @@
   <login-view-template @userLogin="handleUserLogin">
     <template #aside>
       <div class="custom-aside">
-        <h2>Welcome to My Platform</h2>
-        <p>Geospatial collaboration made easy.</p>
-        <img src="@/assets/custom-side-image.svg" alt="Custom side" />
+        <h2>MerginMaps in GEO-PORTAL</h2>
+        <p>Ponujamo gostovanje podatkov zajetih z aplikacijo MerginMaps v Sloveniji. Podatki se lahko tudi sinhronizirajo z vašo PostgreSQL bazo in delijo preko GEO-PORTAL-a.</p>
+        <br>
+        <p>Za več informacij nas <a class="text-color-forest" href="https://level2.si/contact/?podrocje=merginmaps" target="_blank"><b>kontaktirajte</b></a>.</p>
+	<br><p>Kaj je <a class="text-color-forest" href="https://site.geo-portal.si/" target="_blank"><b>GEO-PORTAL</b></a>?</p>
+	<img src="/level2.svg" alt="level2" />
       </div>
     </template>
   </login-view-template>
@@ -42,14 +45,16 @@ export default defineComponent({
 
 <style scoped>
 .custom-aside {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
   padding: 2rem;
-  color: #333;
 }
 
 .custom-aside img {
-  max-width: 100%;
+  max-width: 100px;
   height: auto;
-  margin-top: 1rem;
+  margin-top: 5rem;
 }
 </style>
