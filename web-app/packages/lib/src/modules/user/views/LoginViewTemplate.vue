@@ -8,7 +8,7 @@ SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-MerginMaps-Commercial
   <app-onboarding-page>
     <template #header>
       <h1 class="headline-h1">
-        <template v-if="forgotPassword">Nastavi geslo</template
+        <template v-if="forgotPassword">Ponastavitev gesla</template
         ><template v-else>Prijava</template>
       </h1>
     </template>
@@ -23,9 +23,9 @@ SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-MerginMaps-Commercial
       class="flex flex-column"
     >
       <div>
-        <label for="login">Email</label>
+        <label for="login">E-pošta</label>
         <PInputText
-          placeholder="Type your email"
+          placeholder="Vnesi svoj e-poštni naslov"
           name="email"
           color="inputColor"
           data-cy="reset-form-email"
@@ -40,7 +40,7 @@ SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-MerginMaps-Commercial
       <router-link
         class="text-color-forest align-self-center font-semibold"
         :to="{ name: 'login' }"
-        >Back to login</router-link
+        >Nazaj na prijavo</router-link
       >
 
       <PButton
@@ -48,7 +48,7 @@ SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-MerginMaps-Commercial
         data-cy="reset-form-btn"
         :disabled="!email"
         @click="reset"
-        label="Novo geslo"
+        label="Naprej"
       />
     </form>
     <form v-else @submit.prevent="loginUser" class="flex flex-column">
@@ -111,6 +111,9 @@ SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-MerginMaps-Commercial
         size="large"
         label="Prijava"
       />
+
+        <a target="_blank" href="https://level2.si/contact/?podrocje=merginmaps" class="text-color-forest title-t3 align-self-center">Želite dostop za vašo organizacijo?</a
+      >
     </form>
     <div class="flex flex-column align-items-center">
       <slot name="additionalButtons"> </slot>

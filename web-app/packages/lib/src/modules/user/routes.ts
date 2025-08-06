@@ -24,7 +24,7 @@ export const getUserTitle = (route: RouteLocationNormalizedLoaded) => {
   const params = route.params as UserRouteParams
   const titles: Record<UserRouteName, string | string[]> = {
     [UserRouteName.Login]: [
-      params.reset ? 'Reset password' : 'Sign in',
+      params.reset ? 'Ponastavitev gesla' : 'Prijava',
       DEFAULT_PAGE_TITLE
     ],
     [UserRouteName.ConfirmEmail]: ['Confirm email address', DEFAULT_PAGE_TITLE],
